@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>自动跳转</title>
-    <meta http-equiv="refresh" content="0; url=https://www.52k.cn/">
+    <title>Random Website Redirect</title>
+    <script>
+        function randomRedirect() {
+            var urls = [
+                "https://www.52k.cn/",
+                "ys.mihoyo.com/",
+                "https://sr.mihoyo.com/",
+                "://bh3.mihoyo.com/",
+                "https://n.163.com/m/",
+                "https://gp.qq.com/cp/a20240319kd/m_index.shtml",
+                "http://party.163.com/m/",
+                "https://id5.163.com/m/"
+            ];
+            var randomIndex = Math.floor(Math.random() * urls.length);
+            window.location.href = urls[randomIndex];
+        }
+    </script>
 </head>
-<body>
-    <p>页面正在跳转，请稍等...</p >
+<body onload="randomRedirect()">
+    <!-- Body content will be loaded after redirecting to a random website -->
 </body>
 </html>
